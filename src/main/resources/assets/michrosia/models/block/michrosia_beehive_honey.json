@@ -1,0 +1,10 @@
+{
+  "parent": "block/orientable_with_bottom",
+  "textures": {
+    "particle": "michrosia:block/michrosia_beehive_side",
+    "bottom": "michrosia:block/michrosia_beehive_end",
+    "top": "michrosia:block/michrosia_beehive_end",
+    "front": "michrosia:block/michrosia_beehive_front_honey",
+    "side": "michrosia:block/michrosia_beehive_side"
+  }
+}

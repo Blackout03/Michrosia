@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "michrosia:block/michrosia_leaves"
+  }
+}

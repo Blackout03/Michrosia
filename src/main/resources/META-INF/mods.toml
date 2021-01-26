@@ -1,0 +1,38 @@
+modLoader="javafml"
+loaderVersion="[35,)"
+issueTrackerURL="http://my.issue.tracker/"
+displayURL=""
+license="MIT License"
+
+[[mods]]
+    modId="michrosia"
+    version="${file.jarVersion}"
+    displayName="Michrosia"
+    displayURL="https://www.curseforge.com/minecraft/mc-mods/michrosia"
+    updateJSONURL=""
+    #updateJSONURL="https://raw.githubusercontent.com/Blackout03/Version/master/michrosia_update.json"
+    logoFile="icon.png"
+    credits=""
+    authors="Blackout, Abnormal Core Developers"
+    description='''NULL'''
+
+[[dependencies.michrosia]]
+    modId="forge"
+    mandatory=true
+    versionRange="[35,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.michrosia]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.3]"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.michrosia]]
+    modId="abnormals_core"
+    mandatory=true
+    versionRange = "[3.0.6,)"
+    ordering="AFTER"
+    side="BOTH"

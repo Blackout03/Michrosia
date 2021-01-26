@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "michrosia:michrosia_log",
+    "michrosia:michrosia_wood",
+    "michrosia:stripped_michrosia_log",
+    "michrosia:stripped_michrosia_wood"
+  ]
+}

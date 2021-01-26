@@ -1,0 +1,46 @@
+{
+	// "gui.jei.category.alloying": "Alloying",
+
+	"itemGroup.michrosia_blocks": "Michrosia Blocks",
+	"itemGroup.michrosia_items": "Michrosia Items",
+	"itemGroup.michrosia_tools": "Michrosia Tools",
+	"itemGroup.michrosia_armor": "Michrosia Armor",
+
+	// "container.michrosia.end_stone_smelter": "End Stone Smelter",
+
+	// "biome.michrosia.crystal_mountains": "Michrosia",
+
+	// "entity.michrosia.dragonfly": "Dragonfly",
+	
+	"item.michrosia.michrosia_boat": "Michrosia Boat",
+
+	"block.michrosia.michrosia_planks": "Michrosia Planks",
+	"block.michrosia.michrosia_slab": "Michrosia Slab",
+	"block.michrosia.michrosia_stairs": "Michrosia Stairs",
+	"block.michrosia.michrosia_fence": "Michrosia Fence",
+	"block.michrosia.michrosia_fence_gate": "Michrosia Fence Gate",
+	"block.michrosia.michrosia_pressure_plate": "Michrosia Pressure Plate",
+	"block.michrosia.michrosia_door": "Michrosia Door",
+	"block.michrosia.michrosia_trapdoor": "Michrosia Trapdoor",
+	"block.michrosia.michrosia_button": "Michrosia Button",
+	"block.michrosia.michrosia_bookshelf": "Michrosia Bookshelf",
+	"block.michrosia.michrosia_ladder": "Michrosia Ladder",
+	"block.michrosia.michrosia_log": "Michrosia Log",
+	"block.michrosia.michrosia_wood": "Michrosia Wood",
+	"block.michrosia.stripped_michrosia_log": "Stripped Michrosia Log",
+	"block.michrosia.stripped_michrosia_wood": "Stripped Michrosia Wood",
+	"block.michrosia.michrosia_sapling": "Michrosia Sapling",
+	"block.michrosia.michrosia_leaves": "Michrosia Leaves",
+	"block.michrosia.vertical_michrosia_planks": "Vertical Michrosia Planks",
+	"block.michrosia.michrosia_vertical_slab": "Michrosia Vertical Slab",
+	"block.michrosia.michrosia_leaf_carpet": "Michrosia Leaf Carpet",
+	"block.michrosia.potted_michrosia_sapling": "Potted Michrosia Sapling",
+	"block.michrosia.michrosia_sign": "Michrosia Sign",
+	"block.michrosia.michrosia_chest": "Michrosia Chest",
+	"block.michrosia.michrosia_trapped_chest": "Michrosia Trapped Chest",
+	"block.michrosia.michrosia_beehive": "Michrosia Beehive",
+	"block.michrosia.michrosia_crate": "Michrosia Crate"
+
+	// "effect.michrosia.end_veil": "End Veil",
+	// "enchantment.michrosia.end_veil": "End Veil"
+}
