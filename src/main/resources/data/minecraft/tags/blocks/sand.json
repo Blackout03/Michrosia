@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "michrosia:yellow_sand",
+    "michrosia:green_sand",
+    "michrosia:blue_sand",
+    "michrosia:pink_sand",
+    "michrosia:purple_sand"
+  ]
+}

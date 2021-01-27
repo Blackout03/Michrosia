@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "michrosia:block/blue_sand"
+      },
+      {
+        "model": "michrosia:block/blue_sand",
+        "y": 90
+      },
+      {
+        "model": "michrosia:block/blue_sand",
+        "y": 180
+      },
+      {
+        "model": "michrosia:block/blue_sand",
+        "y": 270
+      }
+    ]
+  }
+}

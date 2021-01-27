@@ -1,13 +1,16 @@
-package com.blackout.michrosia.common.init;
+package com.blackout.michrosia.common.world.biome;
 
 
 import com.blackout.michrosia.Michrosia;
+import com.blackout.michrosia.common.init.MichrosiaBiomes;
+import com.blackout.michrosia.common.init.MichrosiaTreeFeatures;
 import com.minecraftabnormals.abnormals_core.core.util.DataUtil;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.BiomeGenerationSettings;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Features;
+import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.common.world.MobSpawnInfoBuilder;
@@ -26,13 +29,33 @@ public class MichrosiaBiomeFeatures {
 
         if (DataUtil.matchesKeys(biome, MichrosiaBiomes.MICHROSIA.getKey(), MichrosiaBiomes.MICHROSIA_HILLS.getKey())) {
             MichrosiaBiomeFeatures.withMichrosiaFeatures(generation);
-            MichrosiaBiomeFeatures.withExtraDiamondOre(generation);
             if (DataUtil.matchesKeys(biome, MichrosiaBiomes.MICHROSIA_HILLS.getKey()))
                 MichrosiaBiomeFeatures.withMichrosiaHillsFeatures(generation);
 
             DefaultBiomeFeatures.withPassiveMobs(spawns);
             DefaultBiomeFeatures.withBatsAndHostiles(spawns);
         }
+
+        if (DataUtil.matchesKeys(biome, MichrosiaBiomes.RAINBOW_DESERT.getKey())) {
+            MichrosiaBiomeFeatures.withBaseRainbowDesertFeatures(generation);
+
+            DefaultBiomeFeatures.withDesertMobs(spawns);
+        }
+    }
+
+    public static void withBaseRainbowDesertFeatures(BiomeGenerationSettingsBuilder builder) {
+        DefaultBiomeFeatures.withStrongholdAndMineshaft(builder);
+        builder.withStructure(StructureFeatures.RUINED_PORTAL_DESERT);
+        builder.withStructure(StructureFeatures.VILLAGE_DESERT);
+        builder.withStructure(StructureFeatures.DESERT_PYRAMID);
+
+        DefaultBiomeFeatures.withCavesAndCanyons(builder);
+        DefaultBiomeFeatures.withOverworldOres(builder);
+        DefaultBiomeFeatures.withDisks(builder);
+        DefaultBiomeFeatures.withMonsterRoom(builder);
+        DefaultBiomeFeatures.withDesertDeadBushes(builder);
+        DefaultBiomeFeatures.withDesertVegetation(builder);
+        DefaultBiomeFeatures.withDesertWells(builder);
     }
 
     public static void withBaseMichrosiaFeatures(BiomeGenerationSettingsBuilder builder) {
@@ -47,10 +70,6 @@ public class MichrosiaBiomeFeatures {
         DefaultBiomeFeatures.withMonsterRoom(builder);
         DefaultBiomeFeatures.withWarmFlowers(builder);
         DefaultBiomeFeatures.withBadlandsOakTrees(builder);
-    }
-
-    public static void withExtraDiamondOre(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Features.ORE_DIAMOND);
     }
 
     public static void withMichrosiaFeatures(BiomeGenerationSettingsBuilder builder) {

@@ -12,6 +12,17 @@ import net.minecraft.world.IBlockReader;
 import net.minecraftforge.common.ToolType;
 
 public class MichrosiaProperties {
+    public static final AbstractBlock.Properties BLUE_SAND = AbstractBlock.Properties.create(Material.SAND, MaterialColor.BLUE).hardnessAndResistance(0.5F).sound(SoundType.SAND).harvestTool(ToolType.SHOVEL);
+    public static final AbstractBlock.Properties BLUE_SANDSTONE = AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLUE).setRequiresTool().hardnessAndResistance(0.8F).sound(SoundType.SAND).harvestTool(ToolType.PICKAXE);
+    public static final AbstractBlock.Properties GREEN_SAND = AbstractBlock.Properties.create(Material.SAND, MaterialColor.GREEN).hardnessAndResistance(0.5F).sound(SoundType.SAND).harvestTool(ToolType.SHOVEL);
+    public static final AbstractBlock.Properties GREEN_SANDSTONE = AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GREEN).setRequiresTool().hardnessAndResistance(0.8F).sound(SoundType.SAND).harvestTool(ToolType.PICKAXE);
+    public static final AbstractBlock.Properties PINK_SAND = AbstractBlock.Properties.create(Material.SAND, MaterialColor.PINK).hardnessAndResistance(0.5F).sound(SoundType.SAND).harvestTool(ToolType.SHOVEL);
+    public static final AbstractBlock.Properties PINK_SANDSTONE = AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK).setRequiresTool().hardnessAndResistance(0.8F).sound(SoundType.SAND).harvestTool(ToolType.PICKAXE);
+    public static final AbstractBlock.Properties PURPLE_SAND = AbstractBlock.Properties.create(Material.SAND, MaterialColor.PURPLE).hardnessAndResistance(0.5F).sound(SoundType.SAND).harvestTool(ToolType.SHOVEL);
+    public static final AbstractBlock.Properties PURPLE_SANDSTONE = AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PURPLE).setRequiresTool().hardnessAndResistance(0.8F).sound(SoundType.SAND).harvestTool(ToolType.PICKAXE);
+    public static final AbstractBlock.Properties YELLOW_SAND = AbstractBlock.Properties.create(Material.SAND, MaterialColor.YELLOW).hardnessAndResistance(0.5F).sound(SoundType.SAND).harvestTool(ToolType.SHOVEL);
+    public static final AbstractBlock.Properties YELLOW_SANDSTONE = AbstractBlock.Properties.create(Material.ROCK, MaterialColor.YELLOW).setRequiresTool().hardnessAndResistance(0.8F).sound(SoundType.SAND).harvestTool(ToolType.PICKAXE);
+
     public static final AbstractBlock.Properties MICHROSIA_PLANKS = AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD);
     public static final AbstractBlock.Properties MICHROSIA_DOOR = AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).notSolid().hardnessAndResistance(3.0F).sound(SoundType.WOOD);
     public static final AbstractBlock.Properties MICHROSIA_BUTTON = AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().hardnessAndResistance(0.5F).sound(SoundType.WOOD);

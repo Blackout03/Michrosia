@@ -14,7 +14,7 @@ public class MichrosiaConfig {
         public final ConfigValue<Integer> michrosiaWeight;
         public final ConfigValue<Integer> michrosiaHillsWeight;
         public final ConfigValue<Integer> darkstoneHillsWeight;
-        public final ConfigValue<Integer> endPlainsWeight;
+        public final ConfigValue<Integer> rainbowDesertWeight;
 
         public final ConfigValue<Boolean> limitFarmAnimalSpawns;
 
@@ -40,9 +40,9 @@ public class MichrosiaConfig {
                             darkstoneHillsWeight = builder
                                     .define("Darkstone hills weight", 3);
                         builder.pop();
-                        builder.push("endplains");
-                            endPlainsWeight = builder
-                                    .define("End Plains weight", 3);
+                        builder.push("rainbowdesert");
+                            rainbowDesertWeight = builder
+                                    .define("Rainbow Desert weight", 1);
                         builder.pop();
                     builder.pop();
                 builder.pop();

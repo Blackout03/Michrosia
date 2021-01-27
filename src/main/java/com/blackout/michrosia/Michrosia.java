@@ -62,9 +62,10 @@ public class Michrosia
 
     private void setupCommon(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
+            MichrosiaTreeFeatures.Configured.registerConfiguredFeatures();
+            MichrosiaSurfaceBuilders.Configured.registerConfiguredSurfaceBuilders();
             MichrosiaBiomes.addBiomeTypes();
             MichrosiaBiomes.addBiomesToGeneration();
-            MichrosiaTreeFeatures.Configured.registerConfiguredFeatures();
         });
     }
 

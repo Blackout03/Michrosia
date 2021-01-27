@@ -2,6 +2,7 @@ package com.blackout.michrosia.common.init;
 
 import com.blackout.michrosia.Michrosia;
 import com.blackout.michrosia.common.block.MichrosiaLeavesBlock;
+import com.blackout.michrosia.common.block.MichrosiaSandBlock;
 import com.blackout.michrosia.common.world.feature.trees.MichrosiaTree;
 import com.minecraftabnormals.abnormals_core.common.blocks.*;
 import com.minecraftabnormals.abnormals_core.common.blocks.chest.AbnormalsChestBlock;
@@ -31,6 +32,18 @@ public class MichrosiaBlocks {
 
 
     public static final BlockSubRegistryHelper HELPER = Michrosia.REGISTRY_HELPER.getBlockSubHelper();
+
+    // SAND //
+    public static final RegistryObject<Block> BLUE_SAND = HELPER.createBlock("blue_sand", () -> new MichrosiaSandBlock(3176111, MichrosiaProperties.BLUE_SAND), MichrosiaItemGroups.MICHROSIA_BLOCKS);
+    public static final RegistryObject<Block> BLUE_SANDSTONE = HELPER.createBlock("blue_sandstone", () -> new Block(MichrosiaProperties.BLUE_SANDSTONE), MichrosiaItemGroups.MICHROSIA_BLOCKS);
+    public static final RegistryObject<Block> GREEN_SAND = HELPER.createBlock("green_sand", () -> new MichrosiaSandBlock(2919462, MichrosiaProperties.GREEN_SAND), MichrosiaItemGroups.MICHROSIA_BLOCKS);
+    public static final RegistryObject<Block> GREEN_SANDSTONE = HELPER.createBlock("green_sandstone", () -> new Block(MichrosiaProperties.GREEN_SANDSTONE), MichrosiaItemGroups.MICHROSIA_BLOCKS);
+    public static final RegistryObject<Block> PINK_SAND = HELPER.createBlock("pink_sand", () -> new MichrosiaSandBlock(11481206, MichrosiaProperties.PINK_SAND), MichrosiaItemGroups.MICHROSIA_BLOCKS);
+    public static final RegistryObject<Block> PINK_SANDSTONE = HELPER.createBlock("pink_sandstone", () -> new Block(MichrosiaProperties.PINK_SANDSTONE), MichrosiaItemGroups.MICHROSIA_BLOCKS);
+    public static final RegistryObject<Block> PURPLE_SAND = HELPER.createBlock("purple_sand", () -> new MichrosiaSandBlock(5451951, MichrosiaProperties.PURPLE_SAND), MichrosiaItemGroups.MICHROSIA_BLOCKS);
+    public static final RegistryObject<Block> PURPLE_SANDSTONE = HELPER.createBlock("purple_sandstone", () -> new Block(MichrosiaProperties.PURPLE_SANDSTONE), MichrosiaItemGroups.MICHROSIA_BLOCKS);
+    public static final RegistryObject<Block> YELLOW_SAND = HELPER.createBlock("yellow_sand", () -> new MichrosiaSandBlock(11506224, MichrosiaProperties.YELLOW_SAND), MichrosiaItemGroups.MICHROSIA_BLOCKS);
+    public static final RegistryObject<Block> YELLOW_SANDSTONE = HELPER.createBlock("yellow_sandstone", () -> new Block(MichrosiaProperties.YELLOW_SANDSTONE), MichrosiaItemGroups.MICHROSIA_BLOCKS);
 
     // MICHROSIA //
     public static final RegistryObject<Block> STRIPPED_MICHROSIA_LOG = HELPER.createBlock("stripped_michrosia_log", () -> new StrippedLogBlock(MichrosiaProperties.MICHROSIA_LOG), MichrosiaItemGroups.MICHROSIA_BLOCKS);

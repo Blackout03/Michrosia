@@ -14,6 +14,16 @@
 	
 	"item.michrosia.michrosia_boat": "Michrosia Boat",
 
+	"block.michrosia.blue_sand": "Blue Sand",
+	"block.michrosia.blue_sandstone": "Blue Sandstone",
+	"block.michrosia.green_sand": "Green Sand",
+	"block.michrosia.green_sandstone": "Green Sandstone",
+	"block.michrosia.pink_sand": "Pink Sand",
+	"block.michrosia.pink_sandstone": "Pink Sandstone",
+	"block.michrosia.purple_sand": "Purple Sand",
+	"block.michrosia.purple_sandstone": "Purple Sandstone",
+	"block.michrosia.yellow_sand": "Yellow Sand",
+	"block.michrosia.yellow_sandstone": "Yellow Sandstone",
 	"block.michrosia.michrosia_planks": "Michrosia Planks",
 	"block.michrosia.michrosia_slab": "Michrosia Slab",
 	"block.michrosia.michrosia_stairs": "Michrosia Stairs",
