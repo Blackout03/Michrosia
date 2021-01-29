@@ -1,8 +1,7 @@
 {
   "variants": {
-    "":
-    {
-        "model": "michrosia:block/yellow_sandstone"
-      }
+    "": {
+      "model": "michrosia:block/yellow_sandstone"
+    }
   }
 }

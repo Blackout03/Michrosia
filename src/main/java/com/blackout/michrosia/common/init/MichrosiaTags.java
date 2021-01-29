@@ -1,7 +1,6 @@
 package com.blackout.michrosia.common.init;
 
 import com.blackout.michrosia.Michrosia;
-import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.tags.ITag;
 import net.minecraft.tags.ItemTags;

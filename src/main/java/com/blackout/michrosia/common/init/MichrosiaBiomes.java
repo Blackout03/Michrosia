@@ -17,33 +17,37 @@ import net.minecraftforge.fml.common.Mod;
 public class MichrosiaBiomes {
     private static final BiomeSubRegistryHelper HELPER = Michrosia.REGISTRY_HELPER.getBiomeSubHelper();
 
-    public static final BiomeSubRegistryHelper.KeyedBiome MICHROSIA = HELPER.createBiome("michrosia", () -> createMichrosiaBiome(0.0F, 0.0F));
-    public static final BiomeSubRegistryHelper.KeyedBiome MICHROSIA_HILLS = HELPER.createBiome("michrosia_hills", () -> createMichrosiaBiome(0.2F, 1.4F));
-
-    public static final BiomeSubRegistryHelper.KeyedBiome RAINBOW_DESERT = HELPER.createBiome("rainbow_desert", () -> createRainbowDesertBiome(0.45F, 0.15F));
+    public static final BiomeSubRegistryHelper.KeyedBiome MICHROSIA_FOREST = HELPER.createBiome("michrosia_forest", () -> createMichrosiaForestBiome(0.25F, 0.0F));
+    public static final BiomeSubRegistryHelper.KeyedBiome MICHROSIA_FOREST_HILLS = HELPER.createBiome("michrosia_forest_hills", () -> createMichrosiaForestBiome(1.0F, 1.45F));
+    public static final BiomeSubRegistryHelper.KeyedBiome RAINBOW_DESERT = HELPER.createBiome("rainbow_desert", () -> createRainbowDesertBiome(0.25F, 0.125F));
+    public static final BiomeSubRegistryHelper.KeyedBiome RAINBOW_OCEAN = HELPER.createBiome("rainbow_ocean", () -> createRainbowOceanBiome(-1.35F, 0.1875F));
 
     public static void addBiomesToGeneration() {
-        BiomeUtil.addHillBiome(MICHROSIA.getKey(), Pair.of(MICHROSIA.getKey(), 3), Pair.of(MICHROSIA_HILLS.getKey(), 1));
+        BiomeUtil.addHillBiome(MICHROSIA_FOREST.getKey(), Pair.of(MICHROSIA_FOREST.getKey(), 3), Pair.of(MICHROSIA_FOREST_HILLS.getKey(), 1));
 
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(MICHROSIA.getKey(), MichrosiaConfig.COMMON.michrosiaWeight.get()));
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(MICHROSIA_HILLS.getKey(), MichrosiaConfig.COMMON.michrosiaHillsWeight.get()));
-
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(MICHROSIA_FOREST.getKey(), MichrosiaConfig.COMMON.michrosiaForestWeight.get()));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(MICHROSIA_FOREST_HILLS.getKey(), MichrosiaConfig.COMMON.michrosiaForestHillsWeight.get()));
         BiomeManager.addBiome(BiomeManager.BiomeType.DESERT, new BiomeManager.BiomeEntry(RAINBOW_DESERT.getKey(), MichrosiaConfig.COMMON.rainbowDesertWeight.get()));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(RAINBOW_OCEAN.getKey(), MichrosiaConfig.COMMON.rainbowOceanWeight.get()));
     }
 
     public static void addBiomeTypes() {
-        BiomeDictionary.addTypes(MICHROSIA.getKey(), Type.OVERWORLD, Type.FOREST, Type.RARE);
-        BiomeDictionary.addTypes(MICHROSIA_HILLS.getKey(), Type.OVERWORLD, Type.FOREST, Type.RARE, Type.MOUNTAIN, Type.HILLS);
-
+        BiomeDictionary.addTypes(MICHROSIA_FOREST.getKey(), Type.OVERWORLD, Type.FOREST, Type.RARE);
+        BiomeDictionary.addTypes(MICHROSIA_FOREST_HILLS.getKey(), Type.OVERWORLD, Type.FOREST, Type.RARE, Type.MOUNTAIN, Type.HILLS);
         BiomeDictionary.addTypes(RAINBOW_DESERT.getKey(), Type.OVERWORLD, Type.DRY, Type.RARE, Type.HOT, Type.SANDY);
+        BiomeDictionary.addTypes(RAINBOW_OCEAN.getKey(), Type.OVERWORLD, Type.WET, Type.RARE, Type.OCEAN, Type.SANDY);
     }
 
-    private static Biome createMichrosiaBiome(float depth, float scale) {
+    private static Biome createMichrosiaForestBiome(float depth, float scale) {
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale).temperature(0.75F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).withGrassColor(0x81C3FF).withFoliageColor(0x81C3FF).setWaterColor(0x4F97B6).setWaterFogColor(0x051E33).setFogColor(0xC0D8FF).withSkyColor(getSkyColorWithTemperatureModifier(0.75F)).setMoodSound(MoodSoundAmbience.DEFAULT_CAVE).build()).withMobSpawnSettings(new MobSpawnInfo.Builder().copy()).withGenerationSettings((new BiomeGenerationSettings.Builder()).withSurfaceBuilder(ConfiguredSurfaceBuilders.field_244178_j).build()).build();
     }
 
     private static Biome createRainbowDesertBiome(float depth, float scale) {
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale).temperature(2.0F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).withGrassColor(0x81C3FF).withFoliageColor(0x81C3FF).setWaterColor(4159204).setWaterFogColor(329011).setFogColor(14988944).withSkyColor(getSkyColorWithTemperatureModifier(2.0F)).setMoodSound(MoodSoundAmbience.DEFAULT_CAVE).build()).withMobSpawnSettings(new MobSpawnInfo.Builder().copy()).withGenerationSettings((new BiomeGenerationSettings.Builder()).withSurfaceBuilder(MichrosiaSurfaceBuilders.Configured.RAINBOW_DESERT).build()).build();
+    }
+
+    private static Biome createRainbowOceanBiome(float depth, float scale) {
+        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.OCEAN).depth(depth).scale(scale).temperature(1.0F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).withGrassColor(0x81C3FF).withFoliageColor(0x81C3FF).setWaterColor(4159204).setWaterFogColor(329011).setFogColor(14988944).withSkyColor(getSkyColorWithTemperatureModifier(2.0F)).setMoodSound(MoodSoundAmbience.DEFAULT_CAVE).build()).withMobSpawnSettings(new MobSpawnInfo.Builder().copy()).withGenerationSettings((new BiomeGenerationSettings.Builder()).withSurfaceBuilder(MichrosiaSurfaceBuilders.Configured.RAINBOW_OCEAN).build()).build();
     }
 
     private static int getSkyColorWithTemperatureModifier(float temperature) {

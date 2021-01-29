@@ -1,16 +1,9 @@
 package com.blackout.michrosia.common.util;
 
 import net.minecraft.advancements.Advancement;
-import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.PlayerAdvancements;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
-import net.minecraft.client.multiplayer.ClientAdvancementManager;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.server.ServerWorld;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.fml.DistExecutor;
 
 public class PlayerHelper {
     @Deprecated

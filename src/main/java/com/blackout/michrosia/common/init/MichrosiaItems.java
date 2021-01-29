@@ -1,7 +1,6 @@
 package com.blackout.michrosia.common.init;
 
 import com.blackout.michrosia.Michrosia;
-import com.minecraftabnormals.abnormals_core.common.items.AbnormalsSpawnEggItem;
 import com.minecraftabnormals.abnormals_core.core.util.registry.ItemSubRegistryHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
