@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "type=bottom": { "model": "michrosia:block/michrosia_slab" },
-    "type=top": { "model": "michrosia:block/michrosia_slab_top" },
-    "type=double": { "model": "michrosia:block/michrosia_planks" }
-  }
-}

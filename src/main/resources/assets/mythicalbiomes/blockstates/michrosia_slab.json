@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "mythicalbiomes:block/michrosia_slab" },
+    "type=top": { "model": "mythicalbiomes:block/michrosia_slab_top" },
+    "type=double": { "model": "mythicalbiomes:block/michrosia_planks" }
+  }
+}

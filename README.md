@@ -1,27 +1,27 @@
 <h1 align="center">
-  Welcome to Michrosia
+  Welcome to Mythical Biomes
 </h1>
 <p>
-  <a href="https://github.com/Blackout03/michrosia#readme">
+  <a href="https://github.com/Blackout03/Mythical-Biomes#readme">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
   </a>
-  <a href="https://github.com/Blackout03/michrosia/graphs/commit-activity">
+  <a href="https://github.com/Blackout03/Mythical-Biomes/graphs/commit-activity">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
   </a>
-  <a href="https://github.com/Blackout03/michrosia/blob/master/LICENSE">
+  <a href="https://github.com/Blackout03/Mythical-Biomes/blob/master/LICENSE">
     <img alt="License: LGPL v2.1" src="https://img.shields.io/badge/License-MIT-blue.svg" target="_blank" />
   </a>
 </p>
 
-### 🏠 [Homepage](https://www.curseforge.com/minecraft/mc-mods/michrosia)
+### 🏠 [Homepage](https://www.curseforge.com/minecraft/mc-mods/mythicalbiomes)
 
-> A mod that adds Vertical Slabs and more to minecraft!
+> A mod that adds Mythical Biomes to Minecraft!
 
-### 📂 [Download](https://www.curseforge.com/minecraft/mc-mods/michrosia/files)
+### 📂 [Download](https://www.curseforge.com/minecraft/mc-mods/mythicalbiomes/files)
 
 <p>
-  <img src="http://cf.way2muchnoise.eu/full_michrosia_downloads.svg" />
-  <img src="http://cf.way2muchnoise.eu/versions/For%20MC_michrosia_all.svg" />
+  <img src="http://cf.way2muchnoise.eu/full_mythicalbiomes_downloads.svg" />
+  <img src="http://cf.way2muchnoise.eu/versions/For%20MC_mythicalbiomes_all.svg" />
 </p>
 
 ## Author
@@ -34,11 +34,11 @@
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome !<br />Feel free to check [issues page](https://github.com/Blackout03/michrosia/issues).
+Contributions, issues and feature requests are welcome !<br />Feel free to check [issues page](https://github.com/Blackout03/Mythical-Biomes/issues).
 
 ## 📝 License
 
 Copyright © 2021 [Blackout03](https://github.com/Blackout03) <br />
-This project is [MIT](https://github.com/Blackout03/michrosia/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/Blackout03/Mythical-Biomes/blob/master/LICENSE) licensed.
 
 ***

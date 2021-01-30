@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "michrosia:block/green_sand",
-    "particle": "michrosia:block/green_sand"
-  }
-}

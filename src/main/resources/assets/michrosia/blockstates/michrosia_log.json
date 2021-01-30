@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "axis=y":  { "model": "michrosia:block/michrosia_log" },
-    "axis=z":   { "model": "michrosia:block/michrosia_log", "x": 90 },
-    "axis=x":   { "model": "michrosia:block/michrosia_log", "x": 90, "y": 90 }
-  }
-}

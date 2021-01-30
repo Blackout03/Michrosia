@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "type=north": { "model": "mythicalbiomes:block/michrosia_vertical_slab", "y": 0, "uvlock": true },
+    "type=south": { "model": "mythicalbiomes:block/michrosia_vertical_slab", "y": 180, "uvlock": true },
+    "type=east": { "model": "mythicalbiomes:block/michrosia_vertical_slab", "y": 90, "uvlock": true },
+    "type=west": { "model": "mythicalbiomes:block/michrosia_vertical_slab", "y": 270, "uvlock": true },
+    "type=double": { "model": "mythicalbiomes:block/michrosia_planks" }
+  }
+}

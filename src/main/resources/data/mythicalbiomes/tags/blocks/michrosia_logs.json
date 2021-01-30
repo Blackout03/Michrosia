@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "mythicalbiomes:michrosia_log",
+    "mythicalbiomes:michrosia_wood",
+    "mythicalbiomes:stripped_michrosia_log",
+    "mythicalbiomes:stripped_michrosia_wood"
+  ]
+}

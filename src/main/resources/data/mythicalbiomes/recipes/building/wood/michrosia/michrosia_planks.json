@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "mythicalbiomes:michrosia_logs"
+    }
+  ],
+  "result": {
+    "item": "mythicalbiomes:michrosia_planks",
+    "count": 4
+  }
+}

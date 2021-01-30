@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "mythicalbiomes:block/stripped_michrosia_log",
+    "side": "mythicalbiomes:block/stripped_michrosia_log"
+  }
+}

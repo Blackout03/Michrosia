@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "mythicalbiomes:block/michrosia_crate_top",
+    "bottom": "mythicalbiomes:block/michrosia_crate_bottom",
+    "side": "mythicalbiomes:block/michrosia_crate_side"
+  }
+}

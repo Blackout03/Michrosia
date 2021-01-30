@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:melon_slice",
-    "minecraft:glistering_melon_slice",
-    "#michrosia:dire_wolf_breeding_items",
-    "#minecraft:flowers"
-  ]
-}

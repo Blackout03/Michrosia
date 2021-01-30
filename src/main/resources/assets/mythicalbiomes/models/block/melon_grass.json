@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "mythicalbiomes:block/melon_grass_top",
+    "side": "mythicalbiomes:block/melon_grass_side",
+    "bottom": "mythicalbiomes:block/melon_dirt",
+    "particle": "mythicalbiomes:block/melon_grass_top"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "michrosia:michrosia_planks",
-    "michrosia:vertical_michrosia_planks"
+    "mythicalbiomes:michrosia_planks",
+    "mythicalbiomes:vertical_michrosia_planks"
   ]
 }

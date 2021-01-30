@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_bottom_top",
-  "textures": {
-    "top": "michrosia:block/michrosia_crate_top",
-    "bottom": "michrosia:block/michrosia_crate_bottom",
-    "side": "michrosia:block/michrosia_crate_side"
-  }
-}

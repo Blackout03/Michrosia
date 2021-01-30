@@ -21,7 +21,7 @@ mixin {
 }
 
 version = "${project.minecraft}-${project.modVersion}"
-group = 'com.blackout.michrosia'
+group = 'com.blackout.mythicalbiomes'
 archivesBaseName = project.modId
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
@@ -35,9 +35,9 @@ minecraft {
             property "forge.logging.markers", "SCAN,REGISTRIES,REGISTRYDUMP"
             property "forge.logging.console.level", "debug"
             property "mixin.env.disableRefMap", "true"
-            arg "-mixin.config=michrosia.mixins.json"
+            arg "-mixin.config=mythicalbiomes.mixins.json"
             mods {
-                michrosia {
+                mythicalbiomes {
                     source sourceSets.main
                 }
             }
@@ -47,9 +47,9 @@ minecraft {
             property "forge.logging.markers", "SCAN,REGISTRIES,REGISTRYDUMP"
             property "forge.logging.console.level", "debug"
             property "mixin.env.disableRefMap", "true"
-            arg "-mixin.config=michrosia.mixins.json"
+            arg "-mixin.config=mythicalbiomes.mixins.json"
             mods {
-                michrosia {
+                mythicalbiomes {
                     source sourceSets.main
                 }
             }
@@ -58,9 +58,9 @@ minecraft {
             workingDirectory project.file("run")
             property "forge.logging.markers", "SCAN,REGISTRIES,REGISTRYDUMP"
             property "forge.logging.console.level", "debug"
-            args "--mod", "michrosia", "--all", "--output", file("src/generated/resources/")
+            args "--mod", "mythicalbiomes", "--all", "--output", file("src/generated/resources/")
             mods {
-                michrosia {
+                mythicalbiomes {
                     source sourceSets.main
                 }
             }

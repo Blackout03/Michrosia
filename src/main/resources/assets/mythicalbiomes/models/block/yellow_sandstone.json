@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "mythicalbiomes:block/yellow_sandstone_top",
+    "side": "mythicalbiomes:block/yellow_sandstone",
+    "bottom": "mythicalbiomes:block/yellow_sandstone_bottom",
+    "particle": "mythicalbiomes:block/yellow_sandstone"
+  }
+}

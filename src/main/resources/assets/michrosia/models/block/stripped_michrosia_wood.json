@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "michrosia:block/stripped_michrosia_log",
-    "side": "michrosia:block/stripped_michrosia_log"
-  }
-}

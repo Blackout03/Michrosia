@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "mythicalbiomes:stripped_michrosia_log"
+    }
+  },
+  "result": {
+    "item": "mythicalbiomes:stripped_michrosia_wood",
+    "count": 3
+  }
+}

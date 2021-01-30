@@ -1,9 +1,0 @@
-{
-  "parent": "block/cube_bottom_top",
-  "textures": {
-    "top": "michrosia:block/pink_sandstone_top",
-    "side": "michrosia:block/pink_sandstone",
-    "bottom": "michrosia:block/pink_sandstone_bottom",
-    "particle": "michrosia:block/pink_sandstone"
-  }
-}

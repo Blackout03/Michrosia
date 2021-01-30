@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": { "model": "mythicalbiomes:block/michrosia_pressure_plate" },
+    "powered=true": { "model": "mythicalbiomes:block/michrosia_pressure_plate_down" }
+  }
+}

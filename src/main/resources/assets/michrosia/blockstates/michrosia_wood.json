@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "axis=y": { "model": "michrosia:block/michrosia_wood" },
-    "axis=z": { "model": "michrosia:block/michrosia_wood", "x": 90 },
-    "axis=x": { "model": "michrosia:block/michrosia_wood", "x": 90, "y": 90 }
-  }
-}

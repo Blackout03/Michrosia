@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "mythicalbiomes:block/crimson_sand",
+    "particle": "mythicalbiomes:block/crimson_sand"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "abnormals_core:block/leaf_carpet",
+  "textures": {
+    "all": "mythicalbiomes:block/michrosia_leaves"
+  }
+}

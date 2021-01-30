@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "mythicalbiomes:block/michrosia_ladder" },
+    "facing=east":  { "model": "mythicalbiomes:block/michrosia_ladder", "y": 90 },
+    "facing=south": { "model": "mythicalbiomes:block/michrosia_ladder", "y": 180 },
+    "facing=west":  { "model": "mythicalbiomes:block/michrosia_ladder", "y": 270 }
+  }
+}

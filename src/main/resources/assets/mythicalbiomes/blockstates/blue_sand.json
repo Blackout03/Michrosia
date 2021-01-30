@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "mythicalbiomes:block/blue_sand"
+      },
+      {
+        "model": "mythicalbiomes:block/blue_sand",
+        "y": 90
+      },
+      {
+        "model": "mythicalbiomes:block/blue_sand",
+        "y": 180
+      },
+      {
+        "model": "mythicalbiomes:block/blue_sand",
+        "y": 270
+      }
+    ]
+  }
+}

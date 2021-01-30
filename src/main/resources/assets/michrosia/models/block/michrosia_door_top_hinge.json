@@ -1,7 +1,0 @@
-{
-  "parent": "block/door_top_rh",
-  "textures": {
-    "bottom": "michrosia:block/michrosia_door_bottom",
-    "top": "michrosia:block/michrosia_door_top"
-  }
-}

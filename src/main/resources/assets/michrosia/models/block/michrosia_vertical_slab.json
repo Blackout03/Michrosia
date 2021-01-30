@@ -1,8 +1,0 @@
-{
-  "parent": "abnormals_core:block/vertical_slab",
-  "textures": {
-    "side": "michrosia:block/michrosia_planks",
-    "top": "michrosia:block/michrosia_planks",
-    "bottom": "michrosia:block/michrosia_planks"
-  }
-}
