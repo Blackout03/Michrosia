@@ -13,15 +13,15 @@
   </a>
 </p>
 
-### 🏠 [Homepage](https://www.curseforge.com/minecraft/mc-mods/mythicalbiomes)
+### 🏠 [Homepage](https://www.curseforge.com/minecraft/mc-mods/mythical-biomes)
 
 > A mod that adds Mythical Biomes to Minecraft!
 
-### 📂 [Download](https://www.curseforge.com/minecraft/mc-mods/mythicalbiomes/files)
+### 📂 [Download](https://www.curseforge.com/minecraft/mc-mods/mythical-biomes/files)
 
 <p>
-  <img src="http://cf.way2muchnoise.eu/full_mythicalbiomes_downloads.svg" />
-  <img src="http://cf.way2muchnoise.eu/versions/For%20MC_mythicalbiomes_all.svg" />
+  <img src="http://cf.way2muchnoise.eu/full_mythical-biomes_downloads.svg" />
+  <img src="http://cf.way2muchnoise.eu/versions/For%20MC_mythical-biomes_all.svg" />
 </p>
 
 ## Author
