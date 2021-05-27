@@ -32,7 +32,7 @@ public class RainbowDesertSurfaceBuilder extends SurfaceBuilder<SurfaceBuilderCo
             SurfaceBuilder.DEFAULT.buildSurface(random, chunkIn, biomeIn, x, z, startHeight, noise, defaultBlock, defaultFluid, seaLevel, seed, MBSurfaceBuilders.Configs.RD_PINK_SAND);
         }
         if (noise > -2.0D && noise < -0.75D) {
-            SurfaceBuilder.DEFAULT.buildSurface(random, chunkIn, biomeIn, x, z, startHeight, noise, defaultBlock, defaultFluid, seaLevel, seed, MBSurfaceBuilders.Configs.RO_PINK_SANDSTONE);
+            SurfaceBuilder.DEFAULT.buildSurface(random, chunkIn, biomeIn, x, z, startHeight, noise, defaultBlock, defaultFluid, seaLevel, seed, MBSurfaceBuilders.Configs.RD_PINK_SANDSTONE);
         }
         if (noise > -0.75D && noise < 0.75D) {
             SurfaceBuilder.DEFAULT.buildSurface(random, chunkIn, biomeIn, x, z, startHeight, noise, defaultBlock, defaultFluid, seaLevel, seed, MBSurfaceBuilders.Configs.RD_RED_SAND);

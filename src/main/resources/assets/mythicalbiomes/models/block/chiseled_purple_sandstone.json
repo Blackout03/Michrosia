@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "mythicalbiomes:block/purple_sandstone_top",
+    "side": "mythicalbiomes:block/chiseled_purple_sandstone"
+  }
+}

@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[35,)"
+loaderVersion="[32,)"
 issueTrackerURL="http://my.issue.tracker/"
 displayURL=""
 license="MIT License"
@@ -13,26 +13,26 @@ license="MIT License"
     #updateJSONURL="https://raw.githubusercontent.com/Blackout03/Version/master/mythicalbiomes_update.json"
     logoFile="icon.png"
     credits=""
-    authors="Blackout, Abnormal Core Developers"
-    description='''NULL'''
+    authors="Blackout"
+    description='''Thanks to the people who created Abnormal Core'''
 
 [[dependencies.mythicalbiomes]]
     modId="forge"
     mandatory=true
-    versionRange="[35,)"
+    versionRange="[34.1.42,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.mythicalbiomes]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.3]"
+    versionRange="[1.16.3,]"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.mythicalbiomes]]
     modId="abnormals_core"
     mandatory=true
-    versionRange = "[3.0.6,)"
+    versionRange = "[3.1.1,)"
     ordering="AFTER"
     side="BOTH"

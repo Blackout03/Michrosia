@@ -17,8 +17,8 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = MythicalBiomes.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MBSurfaceBuilders {
-    public static final SurfaceBuilder<SurfaceBuilderConfig> RAINBOW_DESERT = new RainbowDesertSurfaceBuilder(SurfaceBuilderConfig.field_237203_a_);
-    public static final SurfaceBuilder<SurfaceBuilderConfig> RAINBOW_OCEAN = new RainbowOceanSurfaceBuilder(SurfaceBuilderConfig.field_237203_a_);
+    public static final SurfaceBuilder<SurfaceBuilderConfig> RAINBOW_DESERT = new RainbowDesertSurfaceBuilder(SurfaceBuilderConfig.CODEC);
+    public static final SurfaceBuilder<SurfaceBuilderConfig> RAINBOW_OCEAN = new RainbowOceanSurfaceBuilder(SurfaceBuilderConfig.CODEC);
 
     @SubscribeEvent
     public static void registerSurfaceBuilders(RegistryEvent.Register<SurfaceBuilder<?>> event) {

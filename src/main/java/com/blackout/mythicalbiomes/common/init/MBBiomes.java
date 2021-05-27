@@ -1,7 +1,6 @@
 package com.blackout.mythicalbiomes.common.init;
 
 import com.blackout.mythicalbiomes.MythicalBiomes;
-import com.blackout.mythicalbiomes.common.config.MBConfig;
 import com.minecraftabnormals.abnormals_core.core.util.BiomeUtil;
 import com.minecraftabnormals.abnormals_core.core.util.registry.BiomeSubRegistryHelper;
 import com.mojang.datafixers.util.Pair;
@@ -25,10 +24,10 @@ public class MBBiomes {
     public static void addBiomesToGeneration() {
         BiomeUtil.addHillBiome(MICHROSIA_FOREST.getKey(), Pair.of(MICHROSIA_FOREST.getKey(), 3), Pair.of(MICHROSIA_FOREST_HILLS.getKey(), 1));
 
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(MICHROSIA_FOREST.getKey(), MBConfig.COMMON.michrosiaForestWeight.get()));
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(MICHROSIA_FOREST_HILLS.getKey(), MBConfig.COMMON.michrosiaForestHillsWeight.get()));
-        BiomeManager.addBiome(BiomeManager.BiomeType.DESERT, new BiomeManager.BiomeEntry(RAINBOW_DESERT.getKey(), MBConfig.COMMON.rainbowDesertWeight.get()));
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(RAINBOW_OCEAN.getKey(), MBConfig.COMMON.rainbowOceanWeight.get()));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(MICHROSIA_FOREST.getKey(), 3 /*/MBConfig.COMMON.michrosiaForestWeight.get()/*/));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(MICHROSIA_FOREST_HILLS.getKey(), 1 /*/MBConfig.COMMON.michrosiaForestHillsWeight.get()/*/));
+        BiomeManager.addBiome(BiomeManager.BiomeType.DESERT, new BiomeManager.BiomeEntry(RAINBOW_DESERT.getKey(), 1 /*/MBConfig.COMMON.rainbowDesertWeight.get()/*/));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(RAINBOW_OCEAN.getKey(), 1 /*/MBConfig.COMMON.rainbowOceanWeight.get()/*/));
     }
 
     public static void addBiomeTypes() {
@@ -39,15 +38,15 @@ public class MBBiomes {
     }
 
     private static Biome createMichrosiaForestBiome(float depth, float scale) {
-        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale).temperature(0.75F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).withGrassColor(0x81C3FF).withFoliageColor(0x81C3FF).setWaterColor(0x4F97B6).setWaterFogColor(0x051E33).setFogColor(0xC0D8FF).withSkyColor(getSkyColorWithTemperatureModifier(0.75F)).setMoodSound(MoodSoundAmbience.DEFAULT_CAVE).build()).withMobSpawnSettings(new MobSpawnInfo.Builder().copy()).withGenerationSettings((new BiomeGenerationSettings.Builder()).withSurfaceBuilder(ConfiguredSurfaceBuilders.field_244178_j).build()).build();
+        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale).temperature(0.75F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).withGrassColor(0x81C3FF).withFoliageColor(0x81C3FF).setWaterColor(0x4F97B6).setWaterFogColor(0x051E33).setFogColor(0xC0D8FF).withSkyColor(getSkyColorWithTemperatureModifier(0.75F)).setMoodSound(MoodSoundAmbience.DEFAULT_CAVE).build()).withMobSpawnSettings(new MobSpawnInfo.Builder().build()).withGenerationSettings((new BiomeGenerationSettings.Builder()).withSurfaceBuilder(ConfiguredSurfaceBuilders.GRASS).build()).build();
     }
 
     private static Biome createRainbowDesertBiome(float depth, float scale) {
-        return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale).temperature(2.0F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).withGrassColor(0x81C3FF).withFoliageColor(0x81C3FF).setWaterColor(4159204).setWaterFogColor(329011).setFogColor(14988944).withSkyColor(getSkyColorWithTemperatureModifier(2.0F)).setMoodSound(MoodSoundAmbience.DEFAULT_CAVE).build()).withMobSpawnSettings(new MobSpawnInfo.Builder().copy()).withGenerationSettings((new BiomeGenerationSettings.Builder()).withSurfaceBuilder(MBSurfaceBuilders.Configured.RAINBOW_DESERT).build()).build();
+        return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale).temperature(2.0F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).withGrassColor(0x81C3FF).withFoliageColor(0x81C3FF).setWaterColor(4159204).setWaterFogColor(329011).setFogColor(14988944).withSkyColor(getSkyColorWithTemperatureModifier(2.0F)).setMoodSound(MoodSoundAmbience.DEFAULT_CAVE).build()).withMobSpawnSettings(new MobSpawnInfo.Builder().build()).withGenerationSettings((new BiomeGenerationSettings.Builder()).withSurfaceBuilder(MBSurfaceBuilders.Configured.RAINBOW_DESERT).build()).build();
     }
 
     private static Biome createRainbowOceanBiome(float depth, float scale) {
-        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.OCEAN).depth(depth).scale(scale).temperature(1.0F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).withGrassColor(0x81C3FF).withFoliageColor(0x81C3FF).setWaterColor(4159204).setWaterFogColor(329011).setFogColor(14988944).withSkyColor(getSkyColorWithTemperatureModifier(2.0F)).setMoodSound(MoodSoundAmbience.DEFAULT_CAVE).build()).withMobSpawnSettings(new MobSpawnInfo.Builder().copy()).withGenerationSettings((new BiomeGenerationSettings.Builder()).withSurfaceBuilder(MBSurfaceBuilders.Configured.RAINBOW_OCEAN).build()).build();
+        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.OCEAN).depth(depth).scale(scale).temperature(1.0F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).withGrassColor(0x81C3FF).withFoliageColor(0x81C3FF).setWaterColor(4159204).setWaterFogColor(329011).setFogColor(14988944).withSkyColor(getSkyColorWithTemperatureModifier(2.0F)).setMoodSound(MoodSoundAmbience.DEFAULT_CAVE).build()).withMobSpawnSettings(new MobSpawnInfo.Builder().build()).withGenerationSettings((new BiomeGenerationSettings.Builder()).withSurfaceBuilder(MBSurfaceBuilders.Configured.RAINBOW_OCEAN).build()).build();
     }
 
     private static int getSkyColorWithTemperatureModifier(float temperature) {

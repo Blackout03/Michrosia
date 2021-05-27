@@ -1,6 +1,5 @@
 package com.blackout.mythicalbiomes;
 
-import com.blackout.mythicalbiomes.common.config.MBConfig;
 import com.blackout.mythicalbiomes.common.init.*;
 import com.minecraftabnormals.abnormals_core.core.util.registry.RegistryHelper;
 import net.minecraft.item.Rarity;
@@ -10,20 +9,16 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
 @Mod(MythicalBiomes.MODID)
-public class MythicalBiomes
-{
+public class MythicalBiomes {
 	public static final String MODID = "mythicalbiomes";
     public static final RegistryHelper REGISTRY_HELPER = new RegistryHelper(MODID);
 
@@ -32,13 +27,11 @@ public class MythicalBiomes
     private static final Rarity rarity = Rarity.create("MYTHICAL", TextFormatting.DARK_RED);
 
 
-    public static ResourceLocation locate(String name)
-    {
+    public static ResourceLocation locate(String name) {
         return new ResourceLocation(MODID, name);
     }
 
-    public static String find(String name)
-    {
+    public static String find(String name) {
         return MODID + ":" + name;
     }
 
@@ -53,11 +46,9 @@ public class MythicalBiomes
         MBDataSerializers.SERIALIZERS.register(bus);
 
         bus.addListener(this::setupCommon);
-        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
-            bus.addListener(this::setupClient);
-        });
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> bus.addListener(this::setupClient));
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MBConfig.COMMON_SPEC);
+//        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MBConfig.COMMON_SPEC);
     }
 
     private void setupCommon(final FMLCommonSetupEvent event) {
@@ -78,6 +69,6 @@ public class MythicalBiomes
     }
 
     public static Rarity getRarity() {
-        return rarity != null ? rarity : Rarity.EPIC;
+        return rarity;
     }
 }

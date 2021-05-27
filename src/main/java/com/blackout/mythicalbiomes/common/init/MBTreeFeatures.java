@@ -9,16 +9,14 @@ import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.foliageplacer.DarkOakFoliagePlacer;
+import net.minecraft.world.gen.foliageplacer.BlobFoliagePlacer;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.treedecorator.TreeDecoratorType;
-import net.minecraft.world.gen.trunkplacer.GiantTrunkPlacer;
+import net.minecraft.world.gen.trunkplacer.StraightTrunkPlacer;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.OptionalInt;
 
 @Mod.EventBusSubscriber(modid = MythicalBiomes.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MBTreeFeatures {
@@ -31,21 +29,32 @@ public class MBTreeFeatures {
     }
 
     public static final class Configs {
+//        public static final BaseTreeFeatureConfig MICHROSIA_TREE_CONFIG = (
+//                new BaseTreeFeatureConfig.Builder(
+//                        new SimpleBlockStateProvider(States.MICHROSIA_LOG),
+//                        new SimpleBlockStateProvider(States.MICHROSIA_LEAVES),
+//                        new DarkOakFoliagePlacer(FeatureSpread.func_242253_a((int) 0.85,0), FeatureSpread.func_242252_a(-1)), // Width of leaves span, , Height of the leaves
+//                        new GiantTrunkPlacer(9,2,10), // Min Height, Height Variation, Max Height
+//                        new ThreeLayerFeature(3,3,3,3,3,OptionalInt.of(1)))
+//        )
+//                .setIgnoreVines()
+//                .func_236702_a_(Heightmap.Type.MOTION_BLOCKING)
+//                .build();
         public static final BaseTreeFeatureConfig MICHROSIA_TREE_CONFIG = (
                 new BaseTreeFeatureConfig.Builder(
                         new SimpleBlockStateProvider(States.MICHROSIA_LOG),
                         new SimpleBlockStateProvider(States.MICHROSIA_LEAVES),
-                        new DarkOakFoliagePlacer(FeatureSpread.func_242253_a((int) 0.85,0), FeatureSpread.func_242252_a(-1)), // Width of leaves span, , Height of the leaves
-                        new GiantTrunkPlacer(9,2,10), // Min Height, Height Variation, Max Height
-                        new ThreeLayerFeature(3,3,3,3,3,OptionalInt.of(1)))
-                )
+                        new BlobFoliagePlacer(FeatureSpread.create((int) 0.85), FeatureSpread.create(2), 4),
+                        new StraightTrunkPlacer(9, 2, 10),
+                        new TwoLayerFeature(3, 3, 3))
+        )
                 .setIgnoreVines()
-                .func_236702_a_(Heightmap.Type.MOTION_BLOCKING)
+                .setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                 .build();
 
-        public static final BaseTreeFeatureConfig MICHROSIA_TREE_WITH_FEW_BEEHIVES_CONFIG = MICHROSIA_TREE_CONFIG.func_236685_a_(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT));
-        public static final BaseTreeFeatureConfig MICHROSIA_TREE_WITH_BEEHIVES_CONFIG = MICHROSIA_TREE_CONFIG.func_236685_a_(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT));
-        public static final BaseTreeFeatureConfig MICHROSIA_TREE_WITH_MORE_BEEHIVES_CONFIG = MICHROSIA_TREE_CONFIG.func_236685_a_(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT));
+        public static final BaseTreeFeatureConfig MICHROSIA_TREE_WITH_FEW_BEEHIVES_CONFIG = MICHROSIA_TREE_CONFIG.copy(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT));
+        public static final BaseTreeFeatureConfig MICHROSIA_TREE_WITH_BEEHIVES_CONFIG = MICHROSIA_TREE_CONFIG.copy(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT));
+        public static final BaseTreeFeatureConfig MICHROSIA_TREE_WITH_MORE_BEEHIVES_CONFIG = MICHROSIA_TREE_CONFIG.copy(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT));
     }
 
     public static final class Configured {
