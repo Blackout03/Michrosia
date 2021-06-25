@@ -11,8 +11,8 @@ import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import java.util.Random;
 
 public class RainbowDesertSurfaceBuilder extends SurfaceBuilder<SurfaceBuilderConfig> {
-    public RainbowDesertSurfaceBuilder(Codec<SurfaceBuilderConfig> p_i51315_1_) {
-        super(p_i51315_1_);
+    public RainbowDesertSurfaceBuilder(Codec<SurfaceBuilderConfig> codec) {
+        super(codec);
     }
 
     public void buildSurface(Random random, IChunk chunkIn, Biome biomeIn, int x, int z, int startHeight, double noise, BlockState defaultBlock, BlockState defaultFluid, int seaLevel, long seed, SurfaceBuilderConfig config) {

@@ -1,32 +1,32 @@
 modLoader="javafml"
 loaderVersion="[32,)"
-issueTrackerURL="http://my.issue.tracker/"
-displayURL=""
-license="MIT License"
+issueTrackerURL="https://github.com/Blackout03/Mythical-Biomes/issues"
+displayURL="https://github.com/Blackout03/Mythical-Biomes"
+license="https://github.com/Blackout03/Mythical-Biomes/blob/main/LICENSE"
 
 [[mods]]
     modId="mythicalbiomes"
     version="${file.jarVersion}"
     displayName="Mythical Biomes"
     displayURL="https://www.curseforge.com/minecraft/mc-mods/mythicalbiomes"
+    itemIcon = "mythicalbiomes:michrosia_log"
     updateJSONURL=""
-    #updateJSONURL="https://raw.githubusercontent.com/Blackout03/Version/master/mythicalbiomes_update.json"
     logoFile="icon.png"
     credits=""
     authors="Blackout"
-    description='''Thanks to the people who created Abnormal Core'''
-
-[[dependencies.mythicalbiomes]]
-    modId="forge"
-    mandatory=true
-    versionRange="[34.1.42,)"
-    ordering="NONE"
-    side="BOTH"
+    description='''Thanks to the people who created Abnormal Core.'''
 
 [[dependencies.mythicalbiomes]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.3,]"
+    versionRange="[1.16.5,]"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.mythicalbiomes]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36.1.30,)"
     ordering="NONE"
     side="BOTH"
 

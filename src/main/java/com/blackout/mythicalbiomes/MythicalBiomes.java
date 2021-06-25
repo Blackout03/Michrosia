@@ -2,9 +2,6 @@ package com.blackout.mythicalbiomes;
 
 import com.blackout.mythicalbiomes.common.init.*;
 import com.minecraftabnormals.abnormals_core.core.util.registry.RegistryHelper;
-import net.minecraft.item.Rarity;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -24,18 +21,6 @@ public class MythicalBiomes {
 
     public static final Logger LOGGER = LogManager.getLogger();
 
-    private static final Rarity rarity = Rarity.create("MYTHICAL", TextFormatting.DARK_RED);
-
-
-    public static ResourceLocation locate(String name) {
-        return new ResourceLocation(MODID, name);
-    }
-
-    public static String find(String name) {
-        return MODID + ":" + name;
-    }
-
-
     public MythicalBiomes() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         MinecraftForge.EVENT_BUS.register(this);
@@ -47,12 +32,11 @@ public class MythicalBiomes {
 
         bus.addListener(this::setupCommon);
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> bus.addListener(this::setupClient));
-
-//        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MBConfig.COMMON_SPEC);
     }
 
     private void setupCommon(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
+            MBCompat.registerCompat();
             MBTreeFeatures.Configured.registerConfiguredFeatures();
             MBSurfaceBuilders.Configured.registerConfiguredSurfaceBuilders();
             MBBiomes.addBiomeTypes();
@@ -62,13 +46,5 @@ public class MythicalBiomes {
 
     private void setupClient(final FMLClientSetupEvent event) {
         MBCompat.setRenderLayers();
-    }
-
-    public static ResourceLocation prefix(String name) {
-        return new ResourceLocation(MODID, name);
-    }
-
-    public static Rarity getRarity() {
-        return rarity;
     }
 }

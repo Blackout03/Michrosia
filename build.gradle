@@ -1,32 +1,43 @@
 buildscript {
     repositories {
         maven { url = "https://files.minecraftforge.net/maven" }
-        maven { url = "https://dist.creeper.host/Sponge/maven" }
+        maven { url = "https://repo.spongepowered.org/repository/maven-public/" }
         jcenter()
         mavenCentral()
     }
     dependencies {
         classpath group: "net.minecraftforge.gradle", name: "ForgeGradle", version: "3.+", changing: true
+        classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
     }
 }
 
-apply plugin: "net.minecraftforge.gradle"
 apply plugin: "eclipse"
+apply plugin: "net.minecraftforge.gradle"
 apply plugin: "maven-publish"
+apply plugin: "org.spongepowered.mixin"
 
-version = "${project.minecraft}-${project.modVersion}"
+mixin {
+    add sourceSets.main, "${project.modId}.refmap.json"
+}
+
 group = 'com.blackout.mythicalbiomes'
+version = "${project.minecraft}-${project.modVersion}"
 archivesBaseName = project.modId
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
 minecraft {
-    mappings channel: project.mappingsChannel, version: project.mappings
+    mappings channel: 'snapshot', version: '20210309-1.16.5'
+
+    accessTransformer = file("src/main/resources/META-INF/accesstransformer.cfg")
+
     runs {
         client {
             workingDirectory project.file("run")
             property "forge.logging.markers", "SCAN,REGISTRIES,REGISTRYDUMP"
             property "forge.logging.console.level", "debug"
+            property "mixin.env.disableRefMap", "true"
+            arg "-mixin.config=" + project.modId + ".mixins.json"
             mods {
                 mythicalbiomes {
                     source sourceSets.main
@@ -37,6 +48,8 @@ minecraft {
             workingDirectory project.file("run")
             property "forge.logging.markers", "SCAN,REGISTRIES,REGISTRYDUMP"
             property "forge.logging.console.level", "debug"
+            property "mixin.env.disableRefMap", "true"
+            arg "-mixin.config=" + project.modId + ".mixins.json"
             mods {
                 mythicalbiomes {
                     source sourceSets.main
@@ -47,7 +60,8 @@ minecraft {
             workingDirectory project.file("run")
             property "forge.logging.markers", "SCAN,REGISTRIES,REGISTRYDUMP"
             property "forge.logging.console.level", "debug"
-            args "--mod", "mythicalbiomes", "--all", "--output", file("src/generated/resources/")
+            property "mixin.env.disableRefMap", "true"
+            args '--mod', 'chaosawakens', '--all', '--output', file('src/main/generated/'), '--existing', file('src/main/resources/')
             mods {
                 mythicalbiomes {
                     source sourceSets.main
@@ -57,31 +71,27 @@ minecraft {
     }
 }
 
+sourceSets.main.resources {
+    srcDir 'src/main/generated'
+}
+
 dependencies {
     minecraft "net.minecraftforge:forge:${project.minecraft}-${project.forge}"
-    implementation fg.deobf("curse.maven:abnormals_core-382216:${project.abnormalsCore}")
+    implementation fg.deobf("com.minecraftabnormals:abnormals-core:${project.minecraft}-${project.abnormalsCore}")
+
     implementation fg.deobf("curse.maven:autoreglib-250363:${project.autoRegLib}")
     implementation fg.deobf("curse.maven:quark-243121:${project.quark}")
     implementation fg.deobf("curse.maven:buzzier_bees-355458:${project.buzzierBees}")
 
     compileOnly fg.deobf("mezz.jei:jei-${project.minecraft}:${project.jei}:api")
     runtimeOnly fg.deobf("mezz.jei:jei-${project.minecraft}:${project.jei}")
-
 }
 
 repositories {
-    maven {
-        name = "Progwml6 maven"
-        url = "https://dvs1.progwml6.com/files/maven/"
-    }
-    maven {
-        name = "ModMaven"
-        url = "https://modmaven.k-4u.nl"
-    }
-    maven {
-        name = "CurseForge"
-        url = "https://www.cursemaven.com"
-    }
+    maven { url "https://www.cursemaven.com" }
+    maven { url "https://maven.jaackson.me" }
+    maven { url "https://dvs1.progwml6.com/files/maven/" }
+    maven { url "https://modmaven.k-4u.nl" }
 }
 
 jar {
@@ -94,6 +104,7 @@ jar {
             "Implementation-Version"  : project.modVersion,
             "Implementation-Vendor"   : "Blackout",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+            "MixinConfigs"            : project.modId + ".mixins.json"
         ])
     }
 }

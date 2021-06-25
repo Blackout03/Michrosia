@@ -72,9 +72,9 @@ public class MBBlocks {
     public static final RegistryObject<Block> MICHROSIA_DOOR = HELPER.createBlock("michrosia_door", () -> new WoodDoorBlock(MBProperties.MICHROSIA_DOOR), MBItemGroups.MYTHICAL_BIOMES_BLOCKS);
     public static final RegistryObject<Block> MICHROSIA_TRAPDOOR = HELPER.createBlock("michrosia_trapdoor", () -> new WoodTrapDoorBlock(MBProperties.MICHROSIA_DOOR), MBItemGroups.MYTHICAL_BIOMES_BLOCKS);
     public static final RegistryObject<Block> MICHROSIA_BUTTON = HELPER.createBlock("michrosia_button", () -> new AbnormalsWoodButtonBlock(MBProperties.MICHROSIA_BUTTON), MBItemGroups.MYTHICAL_BIOMES_BLOCKS);
-    public static final Pair<RegistryObject<AbnormalsStandingSignBlock>, RegistryObject<AbnormalsWallSignBlock>> MICHROSIA_SIGNS = HELPER.createSignBlock("michrosia", MaterialColor.RED);
+    public static final Pair<RegistryObject<AbnormalsStandingSignBlock>, RegistryObject<AbnormalsWallSignBlock>> MICHROSIA_SIGNS = HELPER.createSignBlock("michrosia", MaterialColor.PINK);
 
-    public static final RegistryObject<Block> MICHROSIA_LEAVES = HELPER.createBlock("michrosia_leaves", () -> new MichrosiaLeavesBlock(MBProperties.createLeaves(MaterialColor.PURPLE)), MBItemGroups.MYTHICAL_BIOMES_BLOCKS);
+    public static final RegistryObject<Block> MICHROSIA_LEAVES = HELPER.createBlock("michrosia_leaves", () -> new MichrosiaLeavesBlock(MBProperties.createLeaves(MaterialColor.PINK)), MBItemGroups.MYTHICAL_BIOMES_BLOCKS);
     public static final RegistryObject<Block> MICHROSIA_SAPLING = HELPER.createBlock("michrosia_sapling", () -> new AbnormalsSaplingBlock(new MichrosiaTree(), MBProperties.MICHROSIA_SAPLING), MBItemGroups.MYTHICAL_BIOMES_BLOCKS);
     public static final RegistryObject<Block> POTTED_MICHROSIA_SAPLING = HELPER.createBlockNoItem("potted_michrosia_sapling", () -> new FlowerPotBlock(MBBlocks.MICHROSIA_SAPLING.get(), MBProperties.FLOWER_POT));
 

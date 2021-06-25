@@ -11,8 +11,8 @@ import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import java.util.Random;
 
 public class RainbowOceanSurfaceBuilder extends SurfaceBuilder<SurfaceBuilderConfig> {
-    public RainbowOceanSurfaceBuilder(Codec<SurfaceBuilderConfig> p_i51315_1_) {
-        super(p_i51315_1_);
+    public RainbowOceanSurfaceBuilder(Codec<SurfaceBuilderConfig> codec) {
+        super(codec);
     }
 
     public void buildSurface(Random random, IChunk chunkIn, Biome biomeIn, int x, int z, int startHeight, double noise, BlockState defaultBlock, BlockState defaultFluid, int seaLevel, long seed, SurfaceBuilderConfig config) {

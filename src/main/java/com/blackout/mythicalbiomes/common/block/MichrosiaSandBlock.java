@@ -30,7 +30,7 @@ public class MichrosiaSandBlock extends SandBlock {
             for(Direction direction : Direction.Plane.HORIZONTAL) {
                 BlockState blockstate1 = world.getBlockState(pos.offset(direction));
                 FluidState fluidstate = world.getFluidState(pos.offset(direction));
-                if (fluidstate.isTagged(FluidTags.WATER) || blockstate1.equals(Blocks.FROSTED_ICE)) {
+                if (fluidstate.isTagged(FluidTags.WATER) || blockstate1.matchesBlock(Blocks.FROSTED_ICE)) {
                     return true;
                 }
             }

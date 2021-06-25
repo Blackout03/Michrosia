@@ -1,6 +1,7 @@
 package com.blackout.mythicalbiomes.common.init;
 
 import com.blackout.mythicalbiomes.MythicalBiomes;
+import com.blackout.mythicalbiomes.common.world.surfacebuilders.MelonsSurfaceBuilder;
 import com.blackout.mythicalbiomes.common.world.surfacebuilders.RainbowDesertSurfaceBuilder;
 import com.blackout.mythicalbiomes.common.world.surfacebuilders.RainbowOceanSurfaceBuilder;
 import net.minecraft.block.Blocks;
@@ -19,12 +20,14 @@ import net.minecraftforge.fml.common.Mod;
 public class MBSurfaceBuilders {
     public static final SurfaceBuilder<SurfaceBuilderConfig> RAINBOW_DESERT = new RainbowDesertSurfaceBuilder(SurfaceBuilderConfig.CODEC);
     public static final SurfaceBuilder<SurfaceBuilderConfig> RAINBOW_OCEAN = new RainbowOceanSurfaceBuilder(SurfaceBuilderConfig.CODEC);
+    public static final SurfaceBuilder<SurfaceBuilderConfig> MELONS = new MelonsSurfaceBuilder(SurfaceBuilderConfig.CODEC);
 
     @SubscribeEvent
     public static void registerSurfaceBuilders(RegistryEvent.Register<SurfaceBuilder<?>> event) {
         event.getRegistry().registerAll(
                 RAINBOW_DESERT.setRegistryName(MythicalBiomes.MODID, "rainbow_desert"),
-                RAINBOW_OCEAN.setRegistryName(MythicalBiomes.MODID, "rainbow_ocean")
+                RAINBOW_OCEAN.setRegistryName(MythicalBiomes.MODID, "rainbow_ocean"),
+                MELONS.setRegistryName(MythicalBiomes.MODID, "melons")
         );
     }
 
@@ -44,6 +47,7 @@ public class MBSurfaceBuilders {
         public static final SurfaceBuilderConfig RD_PINK_SANDSTONE = new SurfaceBuilderConfig(MBBlocks.PINK_SANDSTONE.get().getDefaultState(), MBBlocks.PINK_SANDSTONE.get().getDefaultState(), MBBlocks.PINK_SANDSTONE.get().getDefaultState());
         public static final SurfaceBuilderConfig RD_PURPLE_SAND = new SurfaceBuilderConfig(MBBlocks.PURPLE_SAND.get().getDefaultState(), MBBlocks.PURPLE_SAND.get().getDefaultState(), MBBlocks.PURPLE_SANDSTONE.get().getDefaultState());
         public static final SurfaceBuilderConfig RD_PURPLE_SANDSTONE = new SurfaceBuilderConfig(MBBlocks.PURPLE_SANDSTONE.get().getDefaultState(), MBBlocks.PURPLE_SANDSTONE.get().getDefaultState(), MBBlocks.PURPLE_SANDSTONE.get().getDefaultState());
+
         public static final SurfaceBuilderConfig RAINBOW_OCEAN = new SurfaceBuilderConfig(MBBlocks.YELLOW_SAND.get().getDefaultState(), MBBlocks.YELLOW_SAND.get().getDefaultState(), MBBlocks.YELLOW_SAND.get().getDefaultState());
         public static final SurfaceBuilderConfig RO_CRIMSON_SAND = new SurfaceBuilderConfig(MBBlocks.CRIMSON_SAND.get().getDefaultState(), MBBlocks.CRIMSON_SAND.get().getDefaultState(), MBBlocks.CRIMSON_SAND.get().getDefaultState());
         public static final SurfaceBuilderConfig RO_CRIMSON_SANDSTONE = new SurfaceBuilderConfig(MBBlocks.CRIMSON_SANDSTONE.get().getDefaultState(), MBBlocks.CRIMSON_SANDSTONE.get().getDefaultState(), MBBlocks.CRIMSON_SANDSTONE.get().getDefaultState());
@@ -59,11 +63,14 @@ public class MBSurfaceBuilders {
         public static final SurfaceBuilderConfig RO_PINK_SANDSTONE = new SurfaceBuilderConfig(MBBlocks.PINK_SANDSTONE.get().getDefaultState(), MBBlocks.PINK_SANDSTONE.get().getDefaultState(), MBBlocks.PINK_SANDSTONE.get().getDefaultState());
         public static final SurfaceBuilderConfig RO_PURPLE_SAND = new SurfaceBuilderConfig(MBBlocks.PURPLE_SAND.get().getDefaultState(), MBBlocks.PURPLE_SAND.get().getDefaultState(), MBBlocks.PURPLE_SAND.get().getDefaultState());
         public static final SurfaceBuilderConfig RO_PURPLE_SANDSTONE = new SurfaceBuilderConfig(MBBlocks.PURPLE_SANDSTONE.get().getDefaultState(), MBBlocks.PURPLE_SANDSTONE.get().getDefaultState(), MBBlocks.PURPLE_SANDSTONE.get().getDefaultState());
+
+        public static final SurfaceBuilderConfig MELONS = new SurfaceBuilderConfig(MBBlocks.MELON_GRASS.get().getDefaultState(), MBBlocks.MELON_DIRT.get().getDefaultState(), MBBlocks.MELON_DIRT.get().getDefaultState());
     }
 
     public static final class Configured {
         public static final ConfiguredSurfaceBuilder<SurfaceBuilderConfig> RAINBOW_DESERT = MBSurfaceBuilders.RAINBOW_DESERT.func_242929_a(Configs.RAINBOW_DESERT);
         public static final ConfiguredSurfaceBuilder<SurfaceBuilderConfig> RAINBOW_OCEAN = MBSurfaceBuilders.RAINBOW_OCEAN.func_242929_a(Configs.RAINBOW_OCEAN);
+        public static final ConfiguredSurfaceBuilder<SurfaceBuilderConfig> MELONS = MBSurfaceBuilders.MELONS.func_242929_a(Configs.MELONS);
 
         private static <SC extends ISurfaceBuilderConfig> void register(String key, ConfiguredSurfaceBuilder<SC> builder) {
             WorldGenRegistries.register(WorldGenRegistries.CONFIGURED_SURFACE_BUILDER, new ResourceLocation(MythicalBiomes.MODID, key), builder);
@@ -72,6 +79,7 @@ public class MBSurfaceBuilders {
         public static void registerConfiguredSurfaceBuilders() {
             register("rainbow_desert", RAINBOW_DESERT);
             register("rainbow_ocean", RAINBOW_OCEAN);
+            register("melons", MELONS);
         }
     }
 }

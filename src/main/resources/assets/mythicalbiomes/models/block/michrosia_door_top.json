@@ -1,7 +1,7 @@
 {
-  "parent": "block/door_top",
-  "textures": {
-    "bottom": "mythicalbiomes:block/michrosia_door_bottom",
-    "top": "mythicalbiomes:block/michrosia_door_top"
-  }
+    "parent": "block/door_top",
+    "textures": {
+        "bottom": "mythicalbiomes:block/michrosia_door_bottom",
+        "top": "mythicalbiomes:block/michrosia_door_top"
+    }
 }

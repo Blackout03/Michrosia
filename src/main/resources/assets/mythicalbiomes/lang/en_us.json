@@ -1,16 +1,5 @@
 {
-	// "gui.jei.category.alloying": "Alloying",
-
 	"itemGroup.mythicalbiomes_blocks": "Michrosia Blocks",
-	"itemGroup.mythicalbiomes_items": "Michrosia Items",
-	"itemGroup.mythicalbiomes_tools": "Michrosia Tools",
-	"itemGroup.mythicalbiomes_armor": "Michrosia Armor",
-
-	// "container.mythicalbiomes.end_stone_smelter": "End Stone Smelter",
-
-	// "biome.mythicalbiomes.crystal_mountains": "MythicalBiomes",
-
-	// "entity.mythicalbiomes.dragonfly": "Dragonfly",
 	
 	"item.mythicalbiomes.michrosia_boat": "Michrosia Boat",
 
@@ -61,7 +50,4 @@
 	"block.mythicalbiomes.melon_grass": "Melon Grass",
 	"block.mythicalbiomes.melon_dirt": "Melon Dirt",
 	"block.mythicalbiomes.melon_chest": "Melon Chest"
-
-	// "effect.mythicalbiomes.end_veil": "End Veil",
-	// "enchantment.mythicalbiomes.end_veil": "End Veil"
 }
