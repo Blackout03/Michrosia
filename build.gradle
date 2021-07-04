@@ -61,7 +61,7 @@ minecraft {
             property "forge.logging.markers", "SCAN,REGISTRIES,REGISTRYDUMP"
             property "forge.logging.console.level", "debug"
             property "mixin.env.disableRefMap", "true"
-            args '--mod', 'chaosawakens', '--all', '--output', file('src/main/generated/'), '--existing', file('src/main/resources/')
+            args '--mod', 'mythicalbiomes', '--all', '--output', file('src/main/generated/'), '--existing', file('src/main/resources/')
             mods {
                 mythicalbiomes {
                     source sourceSets.main
